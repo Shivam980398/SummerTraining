@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .menu-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  .menu-bar button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .side-menu {
+    background-color: #eee;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-menu li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .side-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .side-menu.active {
+    left: 0; /* Slide in on click */
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  

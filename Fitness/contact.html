@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+  .navbar{  
+      height: auto;
+      width: 95%;
+      margin-left: 25px;
+      border: 1px solid rgb(83, 83, 83);
+      background-color: rgb(32, 30, 30);
+      position: fixed;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-between;
+    }
+  .logo{
+      margin-top: 5px;
+      margin-left: 15px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      color: white;
+      background-color: rgb(32,30,30);
+     
+  }
+  .logo:hover{
+      transform: scale(1.05);
+  }
+  .rightNav{
+    background-color: rgb(32, 30, 30);
+  }
+  a {       
+      margin-top: 10px;
+      height: auto;
+      margin-right: 30px;
+      padding: 2px 2px;
+      text-decoration: none;
+      color: antiquewhite;
+      background-color: rgb(32,30,30);
+     }
+  a:hover{
+        color: rgb(255, 255, 255);
+    }
+ @media(max-width:798.992px)
+  { 
+   .navbar{
+       margin-left: 6px;
+       margin-right: 0px;
+   }
+  .rightNav{
+      width: auto;
+      height: auto;
+      display: flex;
+      margin-right: 2px;
+   }
+       
+ }
+     
+  @media(min-width:798.992px) and (max-width:2140px)
+   { 
+  .rightNav{    
+       height: auto;
+       display: flex;
+     }
+    .a{
+       margin-left: 10px;      
+       padding: 2px 2px;
+       }
+  }
+
+ .heading{
+       
+       height: 25px;
+       width: 90%;
+       margin-top: 20px;
+       margin-left: 45px;
+       padding: 5px;
+       /* border: 1px solid rgb(0, 162, 40); */
+       background-color: black;
+       color: rgb(26, 183, 12);
+       font-size: 15px;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       position: fixed;
+       display: flex;
+       flex-wrap: wrap;
+       align-content: center;
+       justify-content: center;
+      
+   }
+   @media(max-width:843px) { 
+      .heading{font-size: 10px;
+       height: auto;
+       width: 90%;  
+       margin: 25px 4px 50px 15px;
+       display: flex;
+       flex-wrap: wrap;
+       align-content: center;
+       justify-content: center;
+    }}
+    @media(max-width:419px)
+ {
+    .heading{
+        margin: 50px 8px;
+    }
+ }
+        
+ .span1{
+      color: rgb(3, 75, 51);
+      cursor: pointer;
+      transition: 0.3s ease;
+  }
+  .span1:hover{
+      color: blue;
+  }
+  .contact{
+    height: 100%;
+    width: 80%;
+    margin-left: 80px;
+    /* border: 1px solid blueviolet; */
+    @media(max-width:600px){
+           margin-left: 8%;
+    }
+  }
+  fieldset {
+    height: 350px;
+    border-color: rgb(6, 113, 236);
+     /* box-shadow: 5px 5px 5px rgb(22, 3, 231);  */
+     background-color: rgb(10, 10, 10);
+  }
+  legend{
+    color: rgb(244, 249, 245); font-weight: bold;
+    margin: 5px 10px;
+  }
+  label{
+    margin-left: 15px;
+    color: rgb(13, 170, 52);
+  }
+  option{
+    color: grey;
+  }
+  #register
+  {
+     width: 30%; height: 13%; margin-top:1%; margin-left: 40%; color: aliceblue; background-color: rgb(6, 113, 236); 
+  }
+  @media(max-width:378px){
+    #register{
+      height: 10%;
+    }
+  }
+    </style>
+</head>
+<body>
+<div class="main">
+  <div class="navbar">
+    <legend class="logo">FITNESS</legend>
+   <div class="rightNav"> <a href="index.html">Home</a>
+    <a href="#">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact us</a>
+</div>
+</div>
+<br><br><br><br>
+  <div class="contact">
+     <form id="form"  >
+        <fieldset >
+          <legend>Contact Form</legend>
+        <label for="name">Name</label>
+        <input type="text" class="formElem" id="name" name="nam" placeholder="Full name...">
+        <br>
+        <label for="email">Email id</label>
+        <input type="email" placeholder="Example@.com">
+        <br>
+        <label for="phone">Mobile phone no.</label>
+        <input type="tel" id="phone" >
+        <br>
+        <label for="psw">Password:</label>
+        <input type="password" id="psw" name="password" placeholder="Your password..">
+        <br>
+        <label for="gender">Gender</label>
+        <br>
+        <label for="gender">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="gender">Female</label>
+        <input type="radio" id="female" name="gender">
+        <label for="gender">Other</label>
+        <input type="radio" id="other" name="gender">
+        <br>
+        <label for="subject">Select your favourite player:</label>
+  
+        <select name="subject" id="subject" style="color: grey;">
+          <option value="player 1">player 1</option>
+          <option value="player 2">player 2</option>
+          <option value="player 3">player 3</option>
+        </select>
+        <br>
+        <label for="adr">Address:</label>
+        <input id="adr" name="adr" style="width:100%;height:120px; border: 1px solid grey; background-color:rgb(10, 10, 10);" placeholder="Your address.."></textarea>
+        <br>
+  
+        <input type="submit" id="register" >
+      </form>
+    </fieldset>
+  </div>
+</div>
+    <script src="form.js"></script>
+</body>
+</html>

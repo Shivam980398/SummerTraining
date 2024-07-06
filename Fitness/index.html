@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .navbar {
+        height: auto;
+        width: 95%;
+        margin-left: 25px;
+        border: 1px solid rgb(83, 83, 83);
+        background-color: rgb(32, 30, 30);
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-top: 5px;
+        margin-left: 15px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: white;
+        background-color: rgb(32, 30, 30);
+      }
+      .logo:hover {
+        transform: scale(1.05);
+      }
+      .rightNav {
+        background-color: rgb(32, 30, 30);
+      }
+      a {
+        margin-top: 10px;
+        height: auto;
+        margin-right: 30px;
+        padding: 2px 2px;
+        text-decoration: none;
+        color: antiquewhite;
+        background-color: rgb(32, 30, 30);
+      }
+      a:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      @media (max-width: 798.992px) {
+        .navbar {
+          margin-left: 6px;
+          margin-right: 0px;
+        }
+        .rightNav {
+          width: auto;
+          height: auto;
+          display: flex;
+          margin-right: 2px;
+        }
+      }
+      @media (max-width: 510px) {
+        a {
+          font-size: 12px;
+          padding-top: 0px;
+        }
+      }
+
+      @media (min-width: 798.992px) and (max-width: 2140px) {
+        .rightNav {
+          height: auto;
+          display: flex;
+        }
+        .a {
+          margin-left: 10px;
+          padding: 2px 2px;
+        }
+      }
+
+      .heading {
+        height: 25px;
+        width: 90%;
+        margin-top: 20px;
+        margin-left: 45px;
+        padding: 5px;
+        /* border: 1px solid rgb(0, 162, 40); */
+        background-color: black;
+        color: rgb(26, 183, 12);
+        font-size: 15px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+      }
+      @media (max-width: 843px) {
+        .heading {
+          font-size: 10px;
+          height: auto;
+          width: 90%;
+          margin: 25px 4px 50px 15px;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 419px) {
+        .heading {
+          margin: 20px 8px;
+        }
+      }
+      @media (max-width: 370px) {
+        .heading {
+          margin: 50px 8px;
+          width: 100%;
+          padding-top: 0px;
+        }
+      }
+
+      .span1 {
+        color: rgb(3, 75, 51);
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+      .span1:hover {
+        color: blue;
+      }
+
+      .panel {
+        margin: 10px;
+        margin-top: 30px;
+        padding: 10px;
+        width: auto;
+        height: auto;
+        border-top: 1px solid white;
+        border-radius: 0px;
+        background-color: rgb(9, 10, 10);
+        box-shadow: 5px 10px 5px rgb(40, 145, 117);
+        box-shadow: 0px 5px 5px rgb(40, 145, 117);
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: center;
+        cursor: pointer;
+        animation: floatImage 1s ease-in-out infinite;
+        transition: 0.5s ease;
+      }
+      .panel:hover {
+        box-shadow: 5px 10px 5px rgb(248, 71, 6);
+        box-shadow: 0px 5px 5px #09bfdf;
+      }
+
+      /* justify-content: space-between; */
+      @media (max-width: 750px) {
+        .panel {
+          margin-top: 50px;
+          padding-top: 5px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .image {
+        background-color: rgb(9, 10, 10);
+      }
+      .image img {
+        width: 300px;
+        height: 250px;
+        justify-self: flex-start;
+        background-color: rgb(9, 10, 10);
+        box-shadow: 5px 10px 5px rgb(9, 10, 10);
+        box-shadow: 0px 5px 5px rgb(9, 10, 10);
+
+        cursor: pointer;
+        animation: floatImage 4s ease-in-out infinite;
+        transition: 0.4s ease;
+      }
+      .image img:hover {
+        box-shadow: 5px 10px 5px rgb(61, 116, 7);
+        box-shadow: 0px 5px 5px rgb(26, 183, 12);
+      }
+
+      .registerPanel {
+        width: auto;
+        padding-top: 25px;
+        color: #09bfdf;
+        text-align: center;
+        font-size: auto;
+        /* border: 1px solid white; */
+        background-color: rgb(9, 10, 10);
+
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        align-self: center;
+        justify-self: center;
+      }
+      @media (max-width: 995) {
+        .registerPanel {
+          margin-left: 50px;
+        }
+      }
+      @media (max-width: 255px) {
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
+
+      .btn {
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        margin-right: 10px;
+        color: rgb(3, 75, 51);
+        border: 2px solid #09bfdf;
+      }
+
+      .btn:hover {
+        background-color: #09bfdf;
+      }
+      .headin {
+        font-size: 30px;
+        justify-self: center;
+        color: aqua;
+      }
+      .content {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        color: aliceblue;
+        justify-content: space-evenly;
+        border: 1px solid gray;
+        padding: 20px;
+        /* background-color: antiquewhite; */
+      }
+
+      .content img {
+        height: 250px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <legend class="logo">FITNESS</legend>
+      <div class="rightNav">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+    </div>
+    <br />
+    <div class="heading">
+      <h1>
+        "Unlock Your <span class="span1">Fitness</span> Potential," "Get Fit,
+        Feel Great!"
+      </h1>
+    </div>
+    <br /><br />
+    <div class="panel">
+      <div class="image">
+        <img src="image.png" alt="fitness" />
+      </div>
+
+      <div class="registerPanel">
+        <h1 style="margin: 0px 40px">Welcome to Fitness</h1>
+        <h2 style="color: rgb(3, 98, 162)">
+          Please register Yourself or Login
+        </h2>
+        <br />
+        <button class="btn Signup" onclick="window.location.href='signup.html'">
+          Signup
+        </button>
+        <button class="btn Login" onclick="window.location.href='login.html'">
+          Login
+        </button>
+      </div>
+    </div>
+    <br />
+    <br /><br /><br />
+    <centre class="headin">Four-Limbed Staff Pose</centre>
+    <br /><br /><br />
+    <div class="content">
+      <img src="yoga1.png" alt="" />
+      <div class="info">
+        <h1>BENEFITS</h1>
+        <ul>
+          <li>Strengthens the arms, wrists, and shoulders</li>
+          <li>Prepares the body for arm balances</li>
+          <li>Strengthens the core</li>
+        </ul>
+        <h1>CONTRAINDICATIONS</h1>
+        <ul>
+          <li>Wrist injuries and recent surgeries</li>
+          <li>Carpal tunnel syndrome</li>
+          <li>Slipped discs, along with other spinal issues</li>
+        </ul>
+        HOW TO 1. Come into Plank pose. Make sure your hands are aligned beneath
+        your shoulders, and distribute your body weight evenly between your
+        hands and feet. 2. Exhale and bend at the elbows. Slowly lower your body
+        until it’s parallel to the floor, a few inches above your mat, and your
+        arms are at a 90-degree angle. Hold your elbows in close to your ribs.
+        3. Engage your abdomen and thighs to maintain length in the spine. Do
+        not let your shoulders come lower than your elbows. (This will help
+        protect your rotator cuff.) 4. Lower your gaze so you are looking
+        straight down, keeping your neck in line with your spine. 5. To release,
+        exhale and push up into Upward-Facing Dog. Beginners may lower down to
+        the abdomen, preparing for Cobra pose.
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
