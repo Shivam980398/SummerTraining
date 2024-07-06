@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Universal Selector */
+      * {
+        font-family: "Times New Roman", Times, serif;
+      }
+      /* Element */
+      body {
+        margin: 0px;
+        background-color: rgb(203, 208, 213);
+      }
+
+      /* Class selector */
+      .div1 {
+        margin: 100px 100px 100px 450px;
+        height: auto;
+        width: 200px;
+        border: 1px solid black;
+        box-shadow: 5px 15px 5px rgb(180, 173, 173);
+        background-color: blanchedalmond;
+      }
+      /* Id Selector */
+      #form {
+        padding-bottom: 5px;
+      }
+
+      /* Attribute selector */
+      form[id="form"] {
+        margin: 0px;
+        padding: 5px 15px 5px 15px;
+      }
+      input[type="date"] {
+        padding: 1px 29px;
+      }
+
+      input[class="cls"] {
+        margin-top: 5px;
+        text-align: center;
+      }
+      input[type="submit"] {
+        background-color: #09bfdf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <form id="form">
+        <legend style="color: #09bfdf"><b>Sign Up</b></legend>
+
+        <input
+          type="text"
+          id="name"
+          name="nam"
+          class="cls"
+          placeholder="Enter Your name..."
+        />
+        <br />
+        <input
+          type="password"
+          id="psw"
+          name="password"
+          class="cls"
+          placeholder="Your password.."
+        />
+        <br />
+        <input type="email" placeholder="Email" class="cls" />
+        <br />
+        <input type="tel" id="Phone no." class="cls" placeholder="Phone No." />
+        <br />
+        <input type="date" id="date" class="cls" placeholder="Date of Birth" />
+
+        <p>I agree to the TOS <input type="checkbox" /></p>
+
+        <input type="submit" style="padding: 1px 62px" id="register" />
+      </form>
+    </div>
+  </body>
+</html>

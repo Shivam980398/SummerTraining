@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex & Grid</title>
+    <style>
+      .title {
+        height: 30px;
+        background-color: #df9494;
+        padding: 5px;
+
+        text-align: center;
+        font-size: 10px;
+      }
+
+      .navBar {
+        height: 20px;
+        display: flex;
+      }
+
+      .links {
+        height: 20px;
+        width: 100%;
+        background-color: #e8caca;
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .links a {
+        color: black;
+        text-decoration: none;
+      }
+
+      .sidebar {
+        height: 500px;
+        width: 100px;
+        background-color: #eee;
+        padding: 20px;
+      }
+      .content {
+        width: 85%;
+        min-width: 10%;
+        display: block;
+      }
+      .content p {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="title">
+      <h1>Title</h1>
+    </header>
+    <div class="navBar">
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="sidebar">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+          ducimus beatae reprehenderit quo laborum aperiam commodi ex quaerat
+          architecto, consectetur cum, perspiciatis inventore perferendis ut
+          ullam quod sequi, suscipit reiciendis!
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Header</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        nulla nemo aliquam facere odit sunt velit! Libero, totam cumque
+        dignissimos consequatur itaque exercitationem repudiandae, quos nostrum
+        reiciendis nisi quae.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni
+        ipsam velit modi veritatis perspiciatis inventore animi soluta fugiat
+        voluptates doloremque. Doloribus nam repellat inventore, ab voluptatem
+        est nobis ipsum?
+      </p>
+    </div>
+  </body>
+</html>

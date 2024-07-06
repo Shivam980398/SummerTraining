@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      .cardBox {
+        height: 300px;
+        width: auto;
+        background-color: antiquewhite;
+        display: flex;
+
+        align-items: row;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+      }
+      .card {
+        height: 160px;
+        width: 140px;
+        margin: 10px;
+        border: 1px solid black;
+        display: flex;
+      }
+      #card1 {
+        color: aquamarine;
+        border: 1px solid black;
+      }
+      #card2 {
+        background-color: rgb(198, 172, 236);
+        border: 1px solid black;
+      }
+      #card3 {
+        background-color: rgb(200, 245, 230);
+        border: 1px solid black;
+      }
+      #card4 {
+        background-color: rgb(249, 224, 186);
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cardBox">
+      <div class="card" id="card 1">card 1</div>
+      <div class="card" id="card2">card2</div>
+      <div class="card" id="card3">card3</div>
+      <div class="card" id="card4">card4</div>
+    </div>
+  </body>
+</html>

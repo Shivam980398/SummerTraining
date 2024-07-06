@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      h1 {
+        font-size: 50px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+      }
+      @media (max-width: 550px) {
+        h1 {
+          font-size: 50px;
+        }
+        img {
+          width: 150px;
+          height: 100px;
+        }
+      }
+      @media (min-width: 550px) and (max-width: 768px) {
+        h1 {
+          font-size: 90px;
+        }
+        img {
+          width: 250px;
+          height: 200px;
+        }
+      }
+      @media (max-width: 335px) {
+        h1 {
+          font-size: 100px;
+        }
+        img {
+          width: 250px;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <img src="car1.png" alt="" />
+    <img src="car2.png" alt="" />
+    <img src="car3.png" alt="" />
+  </body>
+</html>
