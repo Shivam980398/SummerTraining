@@ -136,18 +136,27 @@
       }
       .content {
         width: 100%;
-        height: 70vh;
+        height: fit-content;
         display: flex;
+
         color: aliceblue;
-        justify-content: space-evenly;
+        justify-content: space-between;
         border: 1px solid gray;
         padding: 20px;
+        font-size: 12px;
         /* background-color: antiquewhite; */
       }
-
       .content img {
         height: 250px;
         width: 300px;
+      }
+      @media (max-width: 620px) {
+        .content {
+          flex-wrap: wrap;
+        }
+        .content img {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -168,9 +177,9 @@
         Feel Great!"
       </h1>
     </div>
-    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
     <centre class="headin">Four-Limbed Staff Pose</centre>
-    <br /><br /><br />
+    <br /><br />
     <div class="content">
       <img src="yoga1.png" alt="" />
       <div class="info">
