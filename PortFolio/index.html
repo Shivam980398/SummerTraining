@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .navbar {
+        height: auto;
+        width: 95%;
+        margin-left: 25px;
+        border: 1px solid rgb(83, 83, 83);
+
+        background-color: rgb(32, 30, 30);
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-top: 5px;
+        margin-left: 15px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: white;
+        background-color: rgb(32, 30, 30);
+      }
+      .logo:hover {
+        transform: scale(1.05);
+      }
+      .rightNav {
+        background-color: rgb(32, 30, 30);
+      }
+      a {
+        margin-top: 10px;
+        height: auto;
+        margin-right: 30px;
+        padding: 2px 2px;
+        text-decoration: none;
+        color: antiquewhite;
+        background-color: rgb(32, 30, 30);
+      }
+      a:hover {
+        color: rgb(255, 255, 255);
+      }
+      @media (max-width: 798.992px) {
+        .navbar {
+          margin-left: 6px;
+          margin-right: 0px;
+        }
+        .rightNav {
+          width: auto;
+          height: auto;
+          display: flex;
+          margin-right: 2px;
+        }
+      }
+      @media (max-width: 334px) {
+        a {
+          font-size: 12px;
+          padding-top: 0px;
+        }
+      }
+
+      @media (min-width: 798.992px) and (max-width: 2140px) {
+        .rightNav {
+          height: auto;
+          display: flex;
+        }
+        .a {
+          margin-left: 10px;
+          padding: 2px 2px;
+        }
+      }
+
+      /* .heading h1:hover{
+
+      } */
+      .navbar:hover {
+        border-bottom: none;
+      }
+      .navbar::after {
+        content: "Hey WhatsUp!  How can i help U";
+        font-size: 40px;
+        padding-top: 8px;
+        text-align: center;
+        color: #e4e0de;
+        text-shadow: 5px 5px 5px #f48937 5px 5px 5px, gainsboro 5px 5px 15px,
+          green;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: 50%;
+        display: none;
+        /* bottom: 0; */
+        /* background-color: black; */
+        /* left: 0; */
+      }
+
+      .navbar:hover::after {
+        display: block;
+        border: none;
+        animation-name: slide;
+        animation-duration: 1s;
+        /* animation-iteration-count: infinite; */
+        animation-fill-mode: forwards;
+      }
+      @keyframes slide {
+        0% {
+          /* width: 0; */
+          height: 0;
+          top: 80%;
+          font-size: 0px;
+        }
+        100% {
+          /* display: flex; */
+          height: 35px;
+          background-color: rgb(32, 30, 30);
+          font-size: 15px;
+          border-top: none;
+          border-left: 1px solid rgb(83, 83, 83);
+          border-right: 1px solid rgb(83, 83, 83);
+          border-bottom: 1px solid rgb(83, 83, 83);
+          top: 70%;
+          margin-top: 10px;
+        }
+      }
+      /* @media (max-width: 843px) {
+        .heading {
+          font-size: 10px;
+          height: auto;
+          width: 90%;
+          margin: 25px 4px 5px 15px;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 419px) {
+        .heading {
+          margin: 50px 8px 5px 8px;
+        }
+      }
+      @media (max-width: 334px) {
+        .heading {
+          margin: 70px 8px 5px 8px;
+          width: 100%;
+          padding-top: 0px;
+        }
+      } */
+
+      .span1 {
+        color: rgb(3, 75, 51);
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+      .span1:hover {
+        color: blue;
+      }
+
+      .panel {
+        margin: 10px;
+        margin-top: 30px;
+        padding: 10px;
+        width: 97vw;
+        height: auto;
+        border-top: 1px solid white;
+        border-radius: 0px;
+        background-color: rgb(9, 10, 10);
+        box-shadow: 5px 10px 5px rgb(40, 145, 117);
+        box-shadow: 0px 5px 5px rgb(40, 145, 117);
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: center;
+        cursor: pointer;
+
+        transition: 0.5s ease-in;
+      }
+      .panel:hover {
+        box-shadow: 5px 10px 5px rgb(248, 71, 6);
+        box-shadow: 0px 2px 5px #f48937;
+      }
+
+      @media (max-width: 750px) {
+        .panel {
+          margin-top: 80px;
+          padding-top: 5px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .image {
+        background-color: rgb(9, 10, 10);
+      }
+      .image img {
+        width: 300px;
+        height: 250px;
+
+        box-shadow: -5px -10px 5px #f48937;
+        box-shadow: 0px -2px 5px #f48937;
+        border-radius: 50%;
+        justify-self: flex-start;
+        background-color: rgb(9, 10, 10);
+        cursor: pointer;
+        transition: all;
+        /* animation: floatImage 4s ease-in-out infinite; */
+        transition: 0.8s ease-in-out;
+      }
+      .image img:hover {
+        /* box-shadow: 5px 10px 5px rgb(61, 116, 7);
+        box-shadow: 0px 5px 5px #09bfdf; */
+        filter: drop-shadow(0 0 1em #ff9f64aa);
+      }
+
+      .registerPanel {
+        width: auto;
+        padding-top: 25px;
+        color: #09bfdf;
+        text-align: center;
+        font-size: auto;
+        /* border: 1px solid white; */
+        background-color: rgb(9, 10, 10);
+
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        align-self: center;
+        justify-self: center;
+      }
+      @media (max-width: 995) {
+        .registerPanel {
+          margin-left: 50px;
+        }
+      }
+      @media (max-width: 323px) {
+        .image {
+          height: 250px;
+          width: 100px;
+        }
+        .img {
+          height: 100px;
+          width: fit-content;
+        }
+      }
+      @media (max-width: 750px) {
+        .image {
+          margin-top: 20px;
+        }
+      }
+      button {
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        margin-right: 10px;
+        color: rgb(3, 75, 51);
+        border: 2px solid #09bfdf;
+      }
+
+      button:hover {
+        background-color: #09bfdf;
+      }
+      .box2-project {
+        text-align: center;
+        padding-bottom: 10px;
+        color: #e4e0de;
+      }
+
+      .projectContainer {
+        height: 450px;
+        width: auto;
+        /* width: 100%; */
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        justify-content: space-evenly;
+        overflow-x: auto;
+        /* background-color: blue; */
+      }
+      .projectContainer::-webkit-scrollbar {
+        width: 10px;
+      }
+      .projectContainer .project {
+        height: 380px;
+        width: 300px;
+        /* line-height: 150px; */
+        text-align: center;
+        color: aqua;
+        margin-right: 5px;
+        background-color: #222121c4;
+        border: 5px solid black;
+        border-radius: 20px;
+        display: flex;
+        font-size: medium;
+        flex-direction: column;
+        /* justify-content:; */
+      }
+      .project p {
+        font-size: 16px;
+        color: aqua;
+      }
+
+      .project img {
+        height: 250px;
+        align-self: center;
+        justify-self: center;
+        width: fit-content;
+        margin-bottom: 10px;
+      }
+      .project:hover {
+        background-color: rgba(0, 255, 255, 0.363);
+      }
+      .box2skill {
+        text-align: center;
+        color: aquamarine;
+        border: 1px solid #e4e0de;
+      }
+
+      .skillContainer {
+        height: 450px;
+        width: auto;
+        /* width: 100%; */
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        justify-content: space-evenly;
+        overflow-x: auto;
+        /* background-color: blue; */
+      }
+      .skillContainer::-webkit-scrollbar {
+        width: 0;
+        color: aqua;
+      }
+      .skillContainer .skills {
+        height: 250px;
+        width: 250px;
+        line-height: 150px;
+        text-align: center;
+        color: aqua;
+        margin-right: 5px;
+        background-color: #2d2c2cc4;
+        border: 5px solid black;
+        border-radius: 50%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+      }
+      .skills img {
+        height: 250px;
+        /* align-self: center;
+  justify-self: center; */
+        width: 250px;
+        background-size: cover;
+        /* margin-bottom: 10px; */
+        border-radius: 50%;
+      }
+      hr {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <legend class="logo">PORTFOLIO</legend>
+      <div class="rightNav">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+    </div>
+    <br />
+    <div class="heading">
+      <h1>Hey Whatsapp</h1>
+    </div>
+
+    <div class="panel">
+      <div class="image">
+        <img src="image.png" alt="fitness" />
+      </div>
+
+      <div class="registerPanel">
+        <h1 style="margin: 0px 40px">Welcome Dear</h1>
+        <h2 style="color: rgb(3, 98, 162)">
+          Please register Yourself or Login
+        </h2>
+        <br />
+        <button class="Signup" onclick="window.location.href='signup.html'">
+          Signup
+        </button>
+        <button class="Login" onclick="window.location.href='login.html'">
+          Login
+        </button>
+      </div>
+      <!-- </div>  -->
+    </div>
+    <br /><br /><br />
+    <hr />
+    <div class="box2-project">
+      <br />
+      <h1>Projects</h1>
+      <div class="projectContainer">
+        <div
+          class="project"
+          onclick="window.location.href='https:/shivam980398.github.io/project2/'"
+        >
+          <img
+            src="image.png"
+            alt=""
+            style="
+              background-color: black;
+              margin-top: 10px;
+              border-radius: 40%;
+            "
+          />
+          <h1>Fitness</h1>
+          <p>
+            THis a fitness site. Where u can gain knowledge about how to stay
+            healthy.
+          </p>
+        </div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+      </div>
+    </div>
+    <br><br>
+     <div class="box2skill">
+       <h1>Skills</h1>
+       <hr>
+          <div class="skillContainer">
+            <div class="skills"><img src="./image1.png" alt="" /></div>
+            <div class="skills"><h1>Skill2</h1></div>
+            <div class="skills"><h1>Skill3</h1></div>
+            <div class="skills"><h1>Skill4</h1></div>
+            <div class="skills"><h1>Skill5</h1></div>
+            <div class="skills"><h1>Skill6</h1></div>
+            <div class="skills"><h1>Skill7</h1></div>
+            <div class="skills"><h1>Skill8</h1></div>
+            <div class="skills"><h1>Skill9</h1></div>
+            <div class="skills"><h1>Skill10</h1></div>
+          </div>
+          <div class="image"></div>
+        </div>
+      </div>
+  </body>
+</html>
